@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> 𝔸𝕡𝕡𝕤 𝔽𝕒𝕔𝕥𝕠𝕣𝕪 - Order Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fff8f0, #ffe6e6);
+    }
+
+    header {
+      background: linear-gradient(to right, #ff4e50, #f9d423);
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .hero {
+      background: url('https://uploads.onecompiler.io/433bkrhuh/43s25u4vt/apps%20factory.jpeg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+    }
+
+    .products-section {
+      padding: 3rem 2rem;
+      background: #fff9f9;
+      text-align: center;
+    }
+
+    .products-section h2 {
+      margin-bottom: 2rem;
+      font-size: 2.3rem;
+      color: #b71c1c;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .product {
+      background: #fff5f5;
+      border: 2px solid #ffcccb;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+      width: 250px;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 1rem 0 0.5rem;
+      color: #d32f2f;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .product .price {
+      color: #d32f2f;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .whatsapp-btn {
+      padding: 0.5rem 1rem;
+      background: linear-gradient(to right, #25D366, #128C7E);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(to right, #128C7E, #25D366);
+    }
+
+    .whatsapp-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      background: #c62828;
+      color: #fff8e1;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1> 𝔸𝕡𝕡𝕤 𝔽𝕒𝕔𝕥𝕠𝕣𝕪 </h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#Apps">Apps</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Shop smater Only with our apps</h2>
+    </div>
+  </section>
+
+  <section class="products-section" id="products">
+    <h3>These apps are only for android users!</h3>
+    <h2>Our Apps</h2>
+    <div class="product-list" id="product-list"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Stylish Collection. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const products = [
+      { name: 'Picsart', img: 'https://source.unsplash.com/250x250/?dress,floral,red', price: 'PKR 500' },
+      { name: 'Inshot Pro', img: 'https://source.unsplash.com/250x250/?suit,black,elegant', price: 'PKR 600' },
+      { name: 'TiktokLive', img: 'https://source.unsplash.com/250x250/?shirt,blue,classic', price: 'PKR 450' },
+      { name: 'Trendy Handbag', img: 'https://source.unsplash.com/250x250/?handbag,trendy', price: 'PKR 1200' },
+      { name: 'Stylish Denim Jacket', img: 'https://source.unsplash.com/250x250/?denim,jacket,stylish', price: 'PKR 1600' },
+      { name: 'Comfortable Sneakers', img: 'https://source.unsplash.com/250x250/?sneakers,comfortable', price: 'PKR 1800' },
+      { name: 'Formal Gown', img: 'https://source.unsplash.com/250x250/?gown,formal', price: 'PKR 2000' },
+      { name: 'Casual T-Shirt', img: 'https://source.unsplash.com/250x250/?tshirt,casual', price: 'PKR 400' },
+      { name: 'Leather Boots', img: 'https://source.unsplash.com/250x250/?boots,leather', price: 'PKR 2500' },
+      { name: 'Silk Scarf', img: 'https://source.unsplash.com/250x250/?scarf,silk', price: 'PKR 700' },
+      { name: 'Men\'s Watch', img: 'https://source.unsplash.com/250x250/?watch,men', price: 'PKR 3000' },
+      { name: 'Women\'s Heels', img: 'https://source.unsplash.com/250x250/?heels,women', price: 'PKR 1500' },
+      { name: 'Sporty Tracksuit', img: 'https://source.unsplash.com/250x250/?tracksuit,sporty', price: 'PKR 2200' },
+      { name: 'Summer Shorts', img: 'https://source.unsplash.com/250x250/?shorts,summer', price: 'PKR 800' },
+      { name: 'Winter Coat', img: 'https://source.unsplash.com/250x250/?coat,winter', price: 'PKR 2700' },
+      { name: 'Designer Sunglasses', img: 'https://source.unsplash.com/250x250/?sunglasses,designer', price: 'PKR 1800' },
+      { name: 'Elegant Necklace', img: 'https://source.unsplash.com/250x250/?necklace,elegant', price: 'PKR 1100' },
+      { name: 'Chic Jumpsuit', img: 'https://source.unsplash.com/250x250/?jumpsuit,chic', price: 'PKR 1700' },
+      { name: 'Comfy Sweater', img: 'https://source.unsplash.com/250x250/?sweater,comfy', price: 'PKR 900' },
+      { name: 'Professional Blazer', img: 'https://source.unsplash.com/250x250/?blazer,professional', price: 'PKR 2100' },
+    ];
+
+    const productList = document.getElementById('product-list');
+
+    products.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product';
+      div.innerHTML = `
+        <img src="${product.img}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>Life time paid.</p>
+        <p class="price">${product.price}</p>
+        <div class="btn-group">
+          <button class="whatsapp-btn" onclick="openWhatsApp('${product.name}', '${product.price}')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> WhatsApp
+          </button>
+        </div>
+      `;
+      productList.appendChild(div);
+    });
+
+    function openWhatsApp(productName, productPrice) {
+      const whatsappNumber = '923392011093';
+      const message = Hello, I'm interested in "${productName}" priced at ${productPrice}. Please share details.;
+      const whatsappUrl = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
+      window.open(whatsappUrl, '_send order message to this number 03392010193');
+    }
+  </script>
+</body>
+
+</html>
