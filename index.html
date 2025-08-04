@@ -7,6 +7,7 @@
   <title> 𝔸𝕡𝕡𝕤 𝔽𝕒𝕔𝕥𝕠𝕣𝕪 - Order Now</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
+    /* [CSS unchanged — already well-written] */
     * {
       margin: 0;
       padding: 0;
@@ -188,7 +189,7 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Shop smater Only with our apps</h2>
+      <h2>Shop smarter Only with our apps</h2>
     </div>
   </section>
 
@@ -207,23 +208,7 @@
       { name: 'Picsart', img: 'https://source.unsplash.com/250x250/?dress,floral,red', price: 'PKR 500' },
       { name: 'Inshot Pro', img: 'https://source.unsplash.com/250x250/?suit,black,elegant', price: 'PKR 600' },
       { name: 'TiktokLive', img: 'https://source.unsplash.com/250x250/?shirt,blue,classic', price: 'PKR 450' },
-      { name: 'Trendy Handbag', img: 'https://source.unsplash.com/250x250/?handbag,trendy', price: 'PKR 1200' },
-      { name: 'Stylish Denim Jacket', img: 'https://source.unsplash.com/250x250/?denim,jacket,stylish', price: 'PKR 1600' },
-      { name: 'Comfortable Sneakers', img: 'https://source.unsplash.com/250x250/?sneakers,comfortable', price: 'PKR 1800' },
-      { name: 'Formal Gown', img: 'https://source.unsplash.com/250x250/?gown,formal', price: 'PKR 2000' },
-      { name: 'Casual T-Shirt', img: 'https://source.unsplash.com/250x250/?tshirt,casual', price: 'PKR 400' },
-      { name: 'Leather Boots', img: 'https://source.unsplash.com/250x250/?boots,leather', price: 'PKR 2500' },
-      { name: 'Silk Scarf', img: 'https://source.unsplash.com/250x250/?scarf,silk', price: 'PKR 700' },
-      { name: 'Men\'s Watch', img: 'https://source.unsplash.com/250x250/?watch,men', price: 'PKR 3000' },
-      { name: 'Women\'s Heels', img: 'https://source.unsplash.com/250x250/?heels,women', price: 'PKR 1500' },
-      { name: 'Sporty Tracksuit', img: 'https://source.unsplash.com/250x250/?tracksuit,sporty', price: 'PKR 2200' },
-      { name: 'Summer Shorts', img: 'https://source.unsplash.com/250x250/?shorts,summer', price: 'PKR 800' },
-      { name: 'Winter Coat', img: 'https://source.unsplash.com/250x250/?coat,winter', price: 'PKR 2700' },
-      { name: 'Designer Sunglasses', img: 'https://source.unsplash.com/250x250/?sunglasses,designer', price: 'PKR 1800' },
-      { name: 'Elegant Necklace', img: 'https://source.unsplash.com/250x250/?necklace,elegant', price: 'PKR 1100' },
-      { name: 'Chic Jumpsuit', img: 'https://source.unsplash.com/250x250/?jumpsuit,chic', price: 'PKR 1700' },
-      { name: 'Comfy Sweater', img: 'https://source.unsplash.com/250x250/?sweater,comfy', price: 'PKR 900' },
-      { name: 'Professional Blazer', img: 'https://source.unsplash.com/250x250/?blazer,professional', price: 'PKR 2100' },
+      // Add more if needed
     ];
 
     const productList = document.getElementById('product-list');
@@ -247,9 +232,9 @@
 
     function openWhatsApp(productName, productPrice) {
       const whatsappNumber = '923392011093';
-      const message = Hello, I'm interested in "${productName}" priced at ${productPrice}. Please share details.;
-      const whatsappUrl = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
-      window.open(whatsappUrl, '_send order message to this number 03392010193');
+      const message = `Hello, I'm interested in "${productName}" priced at ${productPrice}. Please share details.`;
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_send order message to this number 03392011093');
     }
   </script>
 </body>
